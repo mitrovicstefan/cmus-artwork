@@ -15,14 +15,14 @@ func main() {
 	inputChannel := make(chan rune)
   // Store the original terminal state
   fd := int(os.Stdin.Fd())
-  oldState, err := unix.IoctlGetTermios(fd, unix.TCGETS)
+  oldState, err := unix.IoctlGetTermios(fd, utils.GetTermios)
   if err != nil {
     fmt.Println("Error getting terminal attributes:", err)
     return
   }
 
   // Ensure terminal state is restored on exit
-	defer unix.IoctlSetTermios(fd, unix.TCSETS, oldState)
+	defer unix.IoctlSetTermios(fd, utils.SetTermios, oldState)
 
 	// Start terminal update goroutine
 	go utils.UpdateTerminal()

@@ -8,7 +8,7 @@ import (
 
 func HandleInput(inputChannel chan rune) {
 	fd := int(os.Stdin.Fd())
-	oldState, err := unix.IoctlGetTermios(fd, unix.TCGETS)
+	oldState, err := unix.IoctlGetTermios(fd, GetTermios)
 	if err != nil {
 		fmt.Println("Error getting terminal attributes:", err)
 		return
@@ -16,7 +16,7 @@ func HandleInput(inputChannel chan rune) {
 
 	newState := *oldState
 	newState.Lflag &^= unix.ICANON | unix.ECHO
-	if err := unix.IoctlSetTermios(fd, unix.TCSETS, &newState); err != nil {
+	if err := unix.IoctlSetTermios(fd, SetTermios, &newState); err != nil {
 		fmt.Println("Error setting terminal attributes:", err)
 		return
 	}
