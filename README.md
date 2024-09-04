@@ -12,11 +12,35 @@ It will print `cover.jpg` or `cover.png` or `cover.webp` image from a folder whe
 Download the latest release using wget or curl
 
 ```
-wget https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork
+#linux 
+wget https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-linux
+
+#mac 
+wget https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-mac
 ```
 
 ```
-curl https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork
+#linux 
+curl https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-linux
+
+#mac 
+curl https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-mac
+```
+
+Rename the file to `cmus-artwork`
+
+```
+#mac
+mv cmus-artwork-mac cmus-artwork
+
+#linux
+mv cmus-artwork-linux cmus-artwork
+```
+
+Give it executable permissions
+
+```
+sudo chmod -x cmus-artwork
 ```
 
 Move the file to your local binaries
