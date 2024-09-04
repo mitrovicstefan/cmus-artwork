@@ -40,7 +40,7 @@ mv cmus-artwork-linux cmus-artwork
 Give it executable permissions
 
 ```
-sudo chmod -x cmus-artwork
+sudo chmod 755 cmus-artwork
 ```
 
 Move the file to your local binaries
