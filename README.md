@@ -9,32 +9,14 @@ It will print `cover.jpg` or `cover.png` or `cover.webp` image from a folder whe
 
 ## Installation
 
-Download the latest release using wget or curl
+Download the latest release using wget
 
 ```
 #linux 
-wget https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-linux
+wget -O cmus-artwork https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-linux
 
 #mac 
-wget https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-mac
-```
-
-```
-#linux 
-curl https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-linux
-
-#mac 
-curl https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-mac
-```
-
-Rename the file to `cmus-artwork`
-
-```
-#mac
-mv cmus-artwork-mac cmus-artwork
-
-#linux
-mv cmus-artwork-linux cmus-artwork
+wget -O cmus-artwork https://github.com/mitrovicstefan/cmus-artwork/releases/download/v1.0.0/cmus-artwork-mac
 ```
 
 Give it executable permissions
